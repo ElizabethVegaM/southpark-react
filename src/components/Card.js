@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './style.css'
+import './style.css';
 
 class Card extends Component {
   render() {
@@ -15,12 +15,12 @@ class Card extends Component {
     return (
       <div>
         {
-          personajes.map(element => {
+          personajes.map((element, index) => {
             return (
             <div className="card">
-              <h6>Información</h6>
-              <p>Tarjeta N°: {element.nombre}</p>
-              <img src={element.foto} alt="" />
+              <p className="info">Información</p>
+              <p>Tarjeta N°{index + 1}: {element.nombre}</p>
+              <img src={element.foto} alt="foto" className="picture"/>
             </div>
           )})
         }
